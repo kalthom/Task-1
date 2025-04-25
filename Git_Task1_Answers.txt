@@ -1,0 +1,63 @@
+
+Task 1 - Git Fundamentals
+
+Theoretical Part:
+
+1. Explain the purpose of the following Git commands:
+a. git status
+It shows the current status of the working directory and staging area.
+
+b. git init
+It initializes a new Git repository in the current directory.
+
+c. git commit
+It saves the staged changes to the local repository with a message.
+
+d. git push
+It uploads local commits to a remote repository.
+
+2. Ahmed claims that there is no need for the git add command…
+I disagree with Ahmed. The `git add` command is necessary to select which changes to include in the next commit. Without it, you can't control what is staged or committed.
+
+3. Answer the following questions about code hosting providers:
+a. List two popular code hosting platforms besides GitHub.
+GitLab, Bitbucket
+
+b. What key features do code hosting providers offer to enhance version control?
+- Version control
+- Collaboration tools (issues, pull requests)
+- Access control
+- Continuous integration and deployment (CI/CD)
+
+c. True or False: A team can collaborate on a software project without relying on popular code hosting providers.
+True – Teams can set up their own Git server locally for collaboration.
+
+d. What does the -u flag in the git push -u origin main command signify?
+It sets the upstream tracking for the main branch so that future git push and git pull commands can be used without specifying the remote or branch.
+
+Practical Part:
+
+Explain the steps involved and provide the specific commands you would use for this process.
+
+1. Generate SSH key:
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+2. Add the SSH key to the ssh-agent:
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+3. Copy the SSH key and add it to your GitHub account:
+cat ~/.ssh/id_ed25519.pub
+
+4. Create a local repository:
+git init
+
+5. Add files and commit:
+git add .
+git commit -m "Initial commit"
+
+6. Add the remote repository using SSH:
+git remote add origin git@github.com:username/repository.git
+
+7. Push the code:
+git push -u origin main
